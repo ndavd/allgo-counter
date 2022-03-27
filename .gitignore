@@ -1,3 +1,5 @@
+assets/wasm_exec.js
+
 # binaries
 main
 assets/main.wasm

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"sync"
 )
 
@@ -31,6 +32,12 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir(`./assets`)))
 	http.HandleFunc("/inc", incHandler)
 
-	fmt.Println("Server listening on port 3000")
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	var port string
+	if os.Getenv("PORT") != "" {
+		port = os.Getenv("PORT")
+	} else {
+		port = "3000"
+	}
+	fmt.Println("Server listening on port " + port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
