@@ -28,7 +28,9 @@ func main() {
 	h.Set("innerText", message)
 
 	styles := document.Call("createElement", "style")
-	styles.Set("innerHTML", `
+	styles.Set(
+		"innerHTML",
+		`
     body {
       font-family: monospace;
       display: flex;
@@ -54,9 +56,8 @@ func main() {
       font-weight: bold;
       padding: 0.5em 3em;
       cursor: pointer;
-    }
-
-  `)
+    }`,
+	)
 
 	count := document.Call("createElement", "p")
 	count.Set("innerText", getCount())
