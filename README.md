@@ -1,3 +1,3 @@
 # Go All Things!
 
-A simple full stack counter app made entirely in Golang using WASM and the standard library.
+A simple full stack counter app made entirely in Golang using Web Assembly and the standard library.
