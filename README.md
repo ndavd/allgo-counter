@@ -1,2 +1,3 @@
-The simplest interactive full stack website one can make entirely in Golang
-using no external libraries, just WASM and the net/http core library.
+# Go All Things!
+
+A simple full stack counter app made entirely in Golang using WASM and the standard library.
